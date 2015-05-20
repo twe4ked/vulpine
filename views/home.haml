@@ -1,0 +1,14 @@
+%form{action: '/add', method: 'post'}
+  %ol
+    %li
+      %label URL
+      %input{type: 'text', name: 'url'}
+    %li
+      %label Title
+      %input{type: 'text', name: 'title'}
+    %li
+      %label Description
+      %textarea{name: 'description'}
+  %ol
+    %li
+      %input{type: 'submit'}

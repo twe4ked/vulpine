@@ -1,0 +1,11 @@
+!!! 5
+%html
+  %head
+    %title Vulpine - Add links to Pinboard
+    = assets :js
+  %body
+    - if flash[:notice]
+      %p.flash
+        = flash[:notice]
+    %h1 Vulpine
+    = yield

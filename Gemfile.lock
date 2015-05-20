@@ -1,0 +1,47 @@
+GIT
+  remote: git://github.com/Konair0s/opengraph.git
+  revision: fb46ee6815b3c3a9671e6303bf08b7e607b9fdc6
+  specs:
+    opengraph (0.0.4)
+      hashie
+      nokogiri (~> 1.6.0)
+      rest-client (~> 1.6.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    haml (4.0.6)
+      tilt
+    hashie (3.4.1)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
+    mime-types (1.25.1)
+    mini_portile (0.6.2)
+    multi_json (1.11.0)
+    multi_xml (0.5.5)
+    nokogiri (1.6.6.2)
+      mini_portile (~> 0.6.0)
+    pinboard (0.1.1)
+      httparty (= 0.11.0)
+    rack (1.6.1)
+    rdoc (4.2.0)
+    rest-client (1.6.8)
+      mime-types (~> 1.16)
+      rdoc (>= 2.4.2)
+    roda (2.3.0)
+      rack
+    shotgun (0.9.1)
+      rack (>= 1.0)
+    tilt (2.0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  haml
+  opengraph!
+  pinboard
+  roda
+  shotgun
+  tilt
