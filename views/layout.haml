@@ -2,10 +2,15 @@
 %html
   %head
     %title Vulpine - Add links to Pinboard
+    = assets :css
     = assets :js
   %body
-    - if flash[:notice]
-      %p.flash
-        = flash[:notice]
-    %h1 Vulpine
-    = yield
+    %section
+      %h1
+        Vulpine
+        %span
+          Add Links to Pinboard
+      - if flash[:notice]
+        %p.flash
+          = flash[:notice]
+      = yield

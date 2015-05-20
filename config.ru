@@ -23,7 +23,7 @@ class Vulpine < Roda
 
   plugin :render, engine: 'haml'
   plugin :flash
-  plugin :assets, js: 'application.js'
+  plugin :assets, css: 'application.scss', js: 'application.js'
 
   route do |r|
     r.assets
