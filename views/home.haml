@@ -2,13 +2,13 @@
   %ol
     %li
       %label URL
-      %input{type: 'text', name: 'url'}
+      %input{type: 'text', name: 'url', value: values['url']}
     %li
       %label Title
-      %input{type: 'text', name: 'title'}
+      %input{type: 'text', name: 'title', value: values['title']}
     %li
       %label Description
-      %textarea{name: 'description'}
+      %textarea{name: 'description'}= values['description']
   %ol
     %li
       %input{type: 'submit'}

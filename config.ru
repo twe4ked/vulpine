@@ -29,7 +29,7 @@ class Vulpine < Roda
     r.assets
 
     r.root do
-      view 'home'
+      view 'home', locals: {values: {}}
     end
 
     r.on 'info' do
@@ -55,17 +55,12 @@ class Vulpine < Roda
 
     r.on 'add' do
       r.is do
-        r.get do
-          view 'home'
-        end
-
         r.post do
           begin
             add_to_pinboard r.params
           rescue Pinboard::Error => e
-            # TODO: loses data on error
             flash[:notice] = "#{e.message.capitalize}."
-            r.redirect '/add'
+            view 'home', locals: {values: r.params.select { |k, v| %w[url title description].include? k }}
           else
             flash[:notice] = 'Successfully added to Pinboard.'
             r.redirect '/'
