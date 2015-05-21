@@ -30,7 +30,7 @@ h1 {
 a {
   color: $color__text;
   text-decoration: none;
-  border-bottom: $border-width solid $color__text;
+  border-bottom: $border-width solid $color__highlight;
   &:focus {
     outline: none;
     border-color: $color__highlight_focus;
