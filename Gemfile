@@ -4,7 +4,7 @@ gem 'roda'
 gem 'tilt'
 gem 'haml'
 gem 'sass'
-gem 'opengraph', github: 'twe4ked/opengraph'
+gem 'opengraph', github: 'Konair0s/opengraph'
 gem 'pinboard'
 
 group :development do
