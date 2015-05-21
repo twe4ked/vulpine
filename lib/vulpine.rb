@@ -34,12 +34,8 @@ class Vulpine < Roda
             OpenGraph.fetch data[:url], strict, generic_fallback
           rescue Errno::ECONNREFUSED
           end
-          if opengraph
-            data.merge!(
-              title: opengraph.title,
-              description: opengraph.description
-            )
-          end
+
+          merge_opengraph_data! opengraph, data
 
           JSON.generate data
         end
@@ -60,6 +56,15 @@ class Vulpine < Roda
           end
         end
       end
+    end
+  end
+
+  def merge_opengraph_data!(opengraph, data)
+    if opengraph
+      data.merge!(
+        title: opengraph.title,
+        description: opengraph.description
+      )
     end
   end
 

@@ -9,4 +9,5 @@ gem 'pinboard'
 
 group :development do
   gem 'shotgun'
+  gem 'rspec'
 end
