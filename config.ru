@@ -38,7 +38,9 @@ class Vulpine < Roda
           data = {url: r.params['url']}
 
           opengraph = begin
-            OpenGraph.fetch data[:url]
+            strict = false
+            generic_fallback = true
+            OpenGraph.fetch data[:url], strict, generic_fallback
           rescue Errno::ECONNREFUSED
           end
           if opengraph

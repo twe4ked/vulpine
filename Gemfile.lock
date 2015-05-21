@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/Konair0s/opengraph.git
-  revision: fb46ee6815b3c3a9671e6303bf08b7e607b9fdc6
+  remote: git://github.com/twe4ked/opengraph.git
+  revision: f9aba8180f4b872f30e29c58ff27606f13d5057c
   specs:
     opengraph (0.0.4)
       hashie
