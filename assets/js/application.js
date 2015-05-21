@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', function() {
+  var fetchLink = document.querySelectorAll('.fetch a')[0]
+  fetchLink.onclick = info
+})
+
 function info() {
   var request = new XMLHttpRequest()
   request.open('POST', '/info', true)
