@@ -1,35 +1,49 @@
 $border-width: 0.16rem;
 
-$color__light-orange: #d46629;
-$color__orange: #ba470d;
-$color__dark-orange: #910707;
+// http://www.colourlovers.com/palette/3486085/Friendly_Fox
+$color__background: #f97d49;
+$color__text: #ffcea5;
+$color__highlight: #e9d2c0;
+$color__highlight_focus: #7ac7cf;
 
 * { margin: 0; padding: 0; }
 
 body {
-  color: $color__dark-orange;
-  background: $color__light-orange;
+  color: $color__text;
+  background: $color__background;
   font-family: 'Helvetica Neue', Sans-Serif;
   font-size: 16px;
 }
 
 h1 {
+  text-align: center;
   font-size: 4rem;
-  color: $color__orange;
+  color: $color__text;
   margin-bottom: 2rem;
   span {
-    font-size: 2rem;
+    font-size: 1rem;
+    display: block;
+    text-transform: uppercase;
+  }
+}
+
+a {
+  color: $color__text;
+  text-decoration: none;
+  border-bottom: $border-width solid $color__text;
+  &:focus {
+    outline: none;
+    border-color: $color__highlight_focus;
   }
 }
 
 p.flash {
-  color: $color__orange;
+  height: 1rem;
 }
 
 section {
   margin: 2rem auto;
-  width: 64rem - 4rem;
-  padding: 2rem;
+  width: 64rem;
 }
 
 form {
@@ -41,26 +55,30 @@ form {
       label {
         font-size: 0.8rem;
         display: block;
+        margin-bottom: 0.4em;
       }
       input, textarea {
         font-size: 1rem;
-        background: transparent;
-        border: 0 solid $color__orange;
+        background: lighten($color__background, 5%);
+        border-radius: 4px;
+        border: 0 solid $color__highlight;
         border-bottom-width: $border-width;
-        padding: 0.4rem 0;
-        width: 64rem - 8rem;
-        color: $color__dark-orange;
+        padding: 0.8rem;
+        width: 64rem - 1.6rem;
+        color: $color__text;
         &:focus {
           outline: none;
-          border-color: $color__dark-orange;
+          border-color: $color__highlight_focus;
         }
       }
       input[type=submit] {
+        background: transparent;
+        border-radius: none;
         font-size: 1rem;
-        color: $color__dark-orange;
-        padding: 1rem 2rem;
+        color: $color__text;
+        padding: 1rem 0;
         border-width: $border-width;
-        width: 64rem - 8rem;
+        width: 64rem;
       }
       textarea {
         height: 8rem;

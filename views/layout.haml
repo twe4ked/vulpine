@@ -10,7 +10,7 @@
         Vulpine
         %span
           Add Links to Pinboard
-      - if flash[:notice]
-        %p.flash
+      %p.flash
+        - if flash[:notice]
           = flash[:notice]
       = yield
